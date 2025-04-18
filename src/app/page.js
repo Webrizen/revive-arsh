@@ -66,7 +66,7 @@ export default function Home() {
                 >
                   Arshahdul Ahmed
                 </span>{" "}
-                and I make Next.js 15 Websites.
+                and I make Next.js Websites.
               </h1>
               <div className="max-w-3xl">
                 <p className="text-2xl text-zinc-600 mb-8">

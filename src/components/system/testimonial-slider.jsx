@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { testimonials } from "@/enums/data";
 
 // Custom hook for magnetic effect (create this in a separate file)
 function useMagneticEffect(ref, strength = 16) {
@@ -20,35 +21,25 @@ function useMagneticEffect(ref, strength = 16) {
   return { onMouseMove, onMouseLeave };
 }
 
-const testimonials = [
-  {
-    id: 1,
-    quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum at ipsa pariatur culpa iste dolore aliquid officia modi quas.",
-    author: "John Doe",
-    role: "SEO, Kelasi-AI SARL",
-    image: "https://placehold.co/600x400",
-    avatar: "https://placehold.co/100x100",
-  },
-  {
-    id: 2,
-    quote:
-      "This is an amazing service. The support is top-notch and the results are real. Highly recommend for startups.",
-    author: "Jane Smith",
-    role: "CTO, QuantumStack",
-    image: "https://placehold.co/600x400?text=2",
-    avatar: "https://placehold.co/100x100?text=JS",
-  },
-  {
-    id: 3,
-    quote:
-      "Exactly what we needed! The UX is clean, intuitive, and the performance boost is visible.",
-    author: "Arjun Rao",
-    role: "Founder, DevCraft",
-    image: "https://placehold.co/600x400?text=3",
-    avatar: "https://placehold.co/100x100?text=AR",
-  },
-];
+const StarRating = ({ rating }) => {
+  return (
+    <div className="flex items-center mb-4">
+      {[...Array(5)].map((_, i) => (
+        <svg
+          key={i}
+          className={`size-8 ${
+            i < rating ? "text-yellow-400" : "text-gray-300"
+          }`}
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+      <span className="ml-2 text-sm text-gray-500">{rating}.0</span>
+    </div>
+  );
+};
 
 export default function TestimonialSlider() {
   const [index, setIndex] = useState(0);
@@ -93,9 +84,9 @@ export default function TestimonialSlider() {
           <AnimatePresence mode="wait" custom={direction}>
             <motion.img
               key={testimonial.id}
-              src={testimonial.image}
-              alt={testimonial.author}
-              className="w-full h-full object-cover"
+              src={testimonial.client.img || "/placehholder.svg"}
+              alt={testimonial.client.name}
+              className="w-full h-[400px] aspect-square object-cover object-top rounded-2xl"
               initial="enter"
               animate="center"
               exit="exit"
@@ -116,27 +107,43 @@ export default function TestimonialSlider() {
               exit="exit"
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
+             <div className="inline-block mb-4">
+                <span className="inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-800">
+                  {testimonial.category}
+                </span>
+              </div>
+              <StarRating rating={testimonial.stars} />
               <p className="text-xl lg:text-2xl font-medium text-zinc-700">
-                {testimonial.quote}
+                {testimonial.message}
               </p>
               <motion.div
-                className="flex items-start gap-4 mt-6"
+                className="flex items-start gap-4 my-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
                 <img
-                  src={testimonial.avatar}
-                  alt={testimonial.author}
+                  src={testimonial.client.img || "/placehholder.svg"}
+                  alt={testimonial.client.name}
                   className="w-12 h-12 rounded-full flex md:hidden"
                 />
                 <div className="space-y-1 flex-1">
                   <h2 className="text-lg font-semibold leading-none text-zinc-800">
-                    {testimonial.author}
+                    {testimonial.client.name}
                   </h2>
-                  <p className="text-zinc-500">{testimonial.role}</p>
+                  <p className="text-zinc-500">{testimonial.client.position}</p>
                 </div>
               </motion.div>
+               <div className="mt-4 flex flex-wrap gap-2">
+                {testimonial.skills.map((skill, index) => (
+                  <span 
+                    key={index}
+                    className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>
