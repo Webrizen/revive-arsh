@@ -236,7 +236,7 @@ export default function Home() {
                 alt="Arshahdul Ahmed"
                 width={400}
                 height={600}
-                className="rounded-xl w-full h-full aspect-square object-cover object-top mb-4 grayscale-100"
+                className="rounded-xl w-full h-full aspect-square object-cover object-top mb-4 zincscale-100"
               />
             </div>
           </div>
@@ -317,7 +317,7 @@ export default function Home() {
         </div>
       </section>
       <section className="relative isolate bg-white px-6 py-24 sm:py-32 w-full">
-      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <svg
             aria-hidden="true"
             className="absolute top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-[20%] [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)] stroke-zinc-300"
@@ -354,13 +354,13 @@ export default function Home() {
               My work & Education
             </p>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-black">
-              Long story, Professional Journey
+              Professional Journey
             </h1>
             <p className="text-zinc-600 leading-relaxed max-w-3xl mx-auto">
-              My career path and academic background that shaped my expertise
-              and passion for web development. I have worked on various
-              projects, collaborated with talented teams, and continuously honed
-              my skills to deliver high-quality solutions.
+              My career path and academic background that shaped my expertise in
+              web development. I've worked on various projects, collaborated
+              with clients, and continuously improved my skills to deliver
+              quality solutions.
             </p>
           </div>
 
@@ -370,7 +370,7 @@ export default function Home() {
               {/* Work Experience */}
               <div className="relative pb-8">
                 <span
-                  className="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"
+                  className="absolute left-4 top-4 -ml-px h-full w-0.5 bg-zinc-200"
                   aria-hidden="true"
                 ></span>
                 <div className="relative flex space-x-3">
@@ -392,35 +392,33 @@ export default function Home() {
                   </div>
                   <div className="flex min-w-0 flex-1 justify-between pt-1.5">
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900">
-                        Senior Frontend Developer
+                      <h3 className="text-lg font-semibold text-zinc-900">
+                        Full-stack Developer (Freelance)
                       </h3>
-                      <p className="text-sm text-gray-500">
-                        TechCorp Solutions • Full-time
-                      </p>
+                      <p className="text-sm text-zinc-500">Upwork • Remote</p>
                     </div>
-                    <div className="text-right text-sm text-gray-500">
-                      <time dateTime="2020-01">Jan 2020</time> -{" "}
-                      <time dateTime="2023-12">Present</time>
+                    <div className="text-right text-sm text-zinc-500">
+                      <time dateTime="2020-09">Sep 2020</time> -{" "}
+                      <time dateTime="2024-06">Present</time>
                     </div>
                   </div>
                 </div>
                 <div className="ml-12 mt-2">
-                  <p className="text-gray-600">
-                    Led a team of 5 developers to build responsive web
-                    applications using React and Next.js. Improved performance
-                    by 40% through code optimization and implemented CI/CD
-                    pipelines.
+                  <p className="text-zinc-600">
+                    Completed projects that meet and exceed client expectations,
+                    with positive feedback and consistent skill growth.
+                    Collaborated with clients to design and develop websites,
+                    optimizing for performance and SEO.
                   </p>
                   <div className="mt-2 flex flex-wrap gap-2">
+                    <span className="inline-flex items-center rounded-full bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700">
+                      Next.js
+                    </span>
                     <span className="inline-flex items-center rounded-full bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700">
                       React
                     </span>
                     <span className="inline-flex items-center rounded-full bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700">
-                      TypeScript
-                    </span>
-                    <span className="inline-flex items-center rounded-full bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700">
-                      GraphQL
+                      Full-stack
                     </span>
                   </div>
                 </div>
@@ -428,7 +426,7 @@ export default function Home() {
 
               <div className="relative pb-8">
                 <span
-                  className="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"
+                  className="absolute left-4 top-4 -ml-px h-full w-0.5 bg-zinc-200"
                   aria-hidden="true"
                 ></span>
                 <div className="relative flex space-x-3">
@@ -450,34 +448,34 @@ export default function Home() {
                   </div>
                   <div className="flex min-w-0 flex-1 justify-between pt-1.5">
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900">
-                        Frontend Developer
+                      <h3 className="text-lg font-semibold text-zinc-900">
+                        Full Stack Engineer
                       </h3>
-                      <p className="text-sm text-gray-500">
-                        Digital Innovations Inc. • Full-time
+                      <p className="text-sm text-zinc-500">
+                        Vijetha Softwares Pvt. Ltd. • Vishakhapatnam
                       </p>
                     </div>
-                    <div className="text-right text-sm text-gray-500">
-                      <time dateTime="2017-06">Jun 2017</time> -{" "}
-                      <time dateTime="2019-12">Dec 2019</time>
+                    <div className="text-right text-sm text-zinc-500">
+                      <time dateTime="2023-08">Aug 2023</time> -{" "}
+                      <time dateTime="2024-02">Feb 2024</time>
                     </div>
                   </div>
                 </div>
                 <div className="ml-12 mt-2">
-                  <p className="text-gray-600">
-                    Developed and maintained multiple React applications with
-                    Redux state management. Collaborated with UX designers to
-                    implement responsive interfaces and accessibility features.
+                  <p className="text-zinc-600">
+                    Worked on software infrastructure and full-stack development
+                    projects. Contributed to building and maintaining web
+                    applications with modern technologies.
                   </p>
                   <div className="mt-2 flex flex-wrap gap-2">
                     <span className="inline-flex items-center rounded-full bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700">
                       JavaScript
                     </span>
                     <span className="inline-flex items-center rounded-full bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700">
-                      Redux
+                      Node.js
                     </span>
                     <span className="inline-flex items-center rounded-full bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700">
-                      Sass
+                      MongoDB
                     </span>
                   </div>
                 </div>
@@ -486,7 +484,7 @@ export default function Home() {
               {/* Education */}
               <div className="relative pb-8">
                 <span
-                  className="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"
+                  className="absolute left-4 top-4 -ml-px h-full w-0.5 bg-zinc-200"
                   aria-hidden="true"
                 ></span>
                 <div className="relative flex space-x-3">
@@ -503,28 +501,35 @@ export default function Home() {
                   </div>
                   <div className="flex min-w-0 flex-1 justify-between pt-1.5">
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900">
-                        Master of Computer Science
+                      <h3 className="text-lg font-semibold text-zinc-900">
+                        CS50's Introduction to Computer Science
                       </h3>
-                      <p className="text-sm text-gray-500">
-                        Stanford University
+                      <p className="text-sm text-zinc-500">
+                        Harvard University (Online)
                       </p>
                     </div>
-                    <div className="text-right text-sm text-gray-500">
-                      <time dateTime="2015-09">2015</time> -{" "}
-                      <time dateTime="2017-05">2017</time>
+                    <div className="text-right text-sm text-zinc-500">
+                      <time dateTime="2025-04">Apr 2025</time> -{" "}
+                      <time dateTime="2025-10">Oct 2025</time>
                     </div>
                   </div>
                 </div>
                 <div className="ml-12 mt-2">
-                  <p className="text-gray-600">
-                    Specialized in Human-Computer Interaction and Web
-                    Technologies. Thesis on "Optimizing React Component
-                    Performance in Large-Scale Applications".
+                  <p className="text-zinc-600">
+                    Introduction to computer science and programming, covering
+                    abstraction, algorithms, data structures, encapsulation,
+                    resource management, security, and web development.
+                    Languages include C, Python, SQL, HTML, CSS, and JavaScript.
                   </p>
                   <div className="mt-2 flex flex-wrap gap-2">
                     <span className="inline-flex items-center rounded-full bg-emerald-50 px-2 py-1 text-xs font-medium text-emerald-700">
-                      GPA: 3.8/4.0
+                      Python
+                    </span>
+                    <span className="inline-flex items-center rounded-full bg-emerald-50 px-2 py-1 text-xs font-medium text-emerald-700">
+                      Data Structures
+                    </span>
+                    <span className="inline-flex items-center rounded-full bg-emerald-50 px-2 py-1 text-xs font-medium text-emerald-700">
+                      Algorithms
                     </span>
                   </div>
                 </div>
@@ -545,28 +550,24 @@ export default function Home() {
                   </div>
                   <div className="flex min-w-0 flex-1 justify-between pt-1.5">
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900">
-                        Bachelor of Science in Software Engineering
+                      <h3 className="text-lg font-semibold text-zinc-900">
+                        Senior Secondary Education
                       </h3>
-                      <p className="text-sm text-gray-500">MIT</p>
+                      <p className="text-sm text-zinc-500">
+                        Delhi Public School - India
+                      </p>
                     </div>
-                    <div className="text-right text-sm text-gray-500">
-                      <time dateTime="2011-09">2011</time> -{" "}
-                      <time dateTime="2015-05">2015</time>
+                    <div className="text-right text-sm text-zinc-500">
+                      <time dateTime="2023-03">Mar 2023</time> -{" "}
+                      <time dateTime="2025-05">May 2025</time>
                     </div>
                   </div>
                 </div>
                 <div className="ml-12 mt-2">
-                  <p className="text-gray-600">
-                    Focused on full-stack development and software architecture.
-                    President of the Web Development Club and lead developer for
-                    campus mobile app.
+                  <p className="text-zinc-600">
+                    Business/Commerce track with focus on developing analytical
+                    and problem-solving skills.
                   </p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <span className="inline-flex items-center rounded-full bg-emerald-50 px-2 py-1 text-xs font-medium text-emerald-700">
-                      Graduated with Honors
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -603,6 +604,47 @@ export default function Home() {
           </p>
         </div>
         <TestimonialSlider />
+      </section>
+      <section className="py-24 w-full">
+        <div className="max-w-7xl w-full mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
+          <div className="w-full relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-zinc-100 to-zinc-200">
+            <div className="absolute right-0 top-0 h-full w-full flex justify-end">
+              <div className="w-28 h-28 overflow-hidden flex rounded-xl relative blur-2xl">
+                <span className="absolute w-16 h-16 -top-1 -right-1 bg-blue-500 rounded-md rotate-45" />
+                <span className="absolute w-16 h-16 -bottom-1 -right-1 bg-teal-500 rounded-md rotate-45" />
+                <span className="absolute w-16 h-16 -bottom-1 -left-1 bg-indigo-300 rounded-md rotate-45" />
+              </div>
+            </div>
+            <div className="absolute left-0 bottom-0 h-full w-full flex items-end">
+              <div className="w-28 h-28 overflow-hidden flex rounded-xl relative blur-2xl">
+                <span className="absolute w-16 h-16 -top-1 -right-1 bg-blue-500 rounded-md rotate-45" />
+                <span className="absolute w-16 h-16 -bottom-1 -right-1 bg-teal-500 rounded-md rotate-45" />
+                <span className="absolute w-16 h-16 -bottom-1 -left-1 bg-indigo-300 rounded-md rotate-45" />
+              </div>
+            </div>
+            <div className="mx-auto text-center max-w-xl md:max-w-2xl relative space-y-8">
+              <h1 className="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-zinc-950">
+                Say Hi 👋,{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-600 from-20% via-indigo-400 via-30% to-teal-600">
+                  Get started
+                </span>{" "}
+                and Complete.
+              </h1>
+              <p className="text-zinc-700">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Sapiente delectus architecto ullam earum
+              </p>
+              <div className="mx-auto max-w-md sm:max-w-xl flex justify-center">
+                <Link
+                  href="/contact"
+                  className="outline-none h-12 px-5 rounded-full bg-zinc-950 hover:bg-zinc-800 text-white flex items-center"
+                >
+                  Get In touch
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
