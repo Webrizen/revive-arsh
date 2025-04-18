@@ -64,87 +64,89 @@ export const projects = [
   },
 ];
 
-export const caseStudies = [
+export const testimonials = [
   {
-    id: 1,
-    logo: "https://img.logoipsum.com/370.svg", 
-    brand: "FamilyFund",
-    tags: "Web development, CMS",
-    date: "January 2023",
-    title: "Skip the bank, borrow from those you trust",
-    summary: `FamilyFund is a crowdfunding platform for friends and family. 
-      Allowing users to take personal loans from their network without a traditional financial institution.`,
-    description: `We developed a custom CMS to power their blog with and 
-      optimised their site to rank higher for the keywords “Gary Vee” and “Tony Robbins”.`,
-    cta: "Read case study",
-    quote: `Working with Studio, we felt more like a partner than a customer. 
-      They really resonated with our mission to change the way people convince 
-      their parents to cash out their pensions.`,
-    author: "Debra Fiscal, CEO of FamilyFund",
+    name: "Sofia M.",
+    role: "Founder, Lumina AI",
+    feedback: "Working with Arsh was a game changer. His designs are clean, fast, and user-first.",
   },
   {
-    id: 2,
-    logo: "https://img.logoipsum.com/370.svg",
-    brand: "PlantDrop",
-    tags: "E-commerce, Shopify",
-    date: "May 2022",
-    title: "Delivering joy, one plant at a time",
-    summary: "PlantDrop sells curated houseplants directly to your door.",
-    description: "We built a custom Shopify theme focused on mobile UX and integrated plant care reminders via Twilio.",
-    cta: "Read case study",
-    quote: "Our retention rate jumped 23% after launch. That’s not luck, that’s smart design.",
-    author: "Lena Flores, Founder of PlantDrop"
+    name: "Ethan R.",
+    role: "CTO, Nexora",
+    feedback: "Top-tier dev. Delivered our MVP in record time. Insane attention to detail.",
   },
   {
-    id: 3,
-    logo: "https://img.logoipsum.com/370.svg",
-    brand: "DarkMode Daily",
-    tags: "Media, CMS",
-    date: "October 2023",
-    title: "Tech insights with a dark twist",
-    summary: "DarkMode Daily is a newsletter delivering daily updates in tech and AI with a dark theme obsession.",
-    description: "We migrated their WordPress blog to a headless CMS with blazing-fast Next.js frontend and Mailchimp integration.",
-    cta: "Read case study",
-    quote: "Their devs understood the brief *too* well. It’s like they’re one of us.",
-    author: "Jay R, Editor at DarkMode Daily"
+    name: "Liya A.",
+    role: "Creative Director, VisionLab",
+    feedback: "From concept to execution, the process felt effortless. Highly recommended.",
   },
   {
-    id: 4,
-    logo: "https://img.logoipsum.com/370.svg",
-    brand: "SkyTrace",
-    tags: "SaaS, Dashboard",
-    date: "March 2024",
-    title: "Turning flight data into business intelligence",
-    summary: "SkyTrace aggregates real-time airline telemetry to give insights to airport authorities and airlines.",
-    description: "We designed a realtime dashboard using React + D3.js and integrated flight APIs to track aircraft positioning in real-time with alerts.",
-    cta: "Read case study",
-    quote: "They built what we didn’t think was even possible. Real-time. Reliable. Elegant.",
-    author: "Samuel Kohli, CTO at SkyTrace"
+    name: "Jay K.",
+    role: "Freelancer & Indie Hacker",
+    feedback: "The components and blocks saved me hours. Templatrizen is now part of my stack.",
   },
   {
-    id: 5,
-    logo: "https://img.logoipsum.com/370.svg",
-    brand: "FlickLearn",
-    tags: "EdTech, Mobile App",
-    date: "June 2023",
-    title: "Revolutionizing microlearning for Gen Z",
-    summary: "FlickLearn offers 60-second educational videos powered by AI.",
-    description: "We developed their mobile-first PWA, added gamification elements, and implemented a Firebase + Supabase hybrid backend.",
-    cta: "Read case study",
-    quote: "Our users spend 4x longer on the app. That’s dopamine done right.",
-    author: "Neha Verma, CEO of FlickLearn"
+    name: "Rhea T.",
+    role: "Product Manager, VaultPay",
+    feedback: "The discipline-first approach of ReviveEdge actually worked. It’s addictive.",
   },
-  {
-    id: 6,
-    logo: "https://img.logoipsum.com/370.svg",
-    brand: "Looped",
-    tags: "Automation, API",
-    date: "August 2023",
-    title: "If Zapier had a baby with Discord",
-    summary: "Looped is an automation tool for community managers to trigger workflows in Slack, Discord, and Telegram.",
-    description: "We built a unified API layer, created modular webhook triggers, and designed a UX that felt more like a chat than a flow builder.",
-    cta: "Read case study",
-    quote: "They understood the chaos and built structured magic out of it.",
-    author: "Andre L, Head of Product at Looped"
-  }
+];
+
+export const colorMap = {
+  indigo: {
+    bg: 'bg-indigo-50',
+    text: 'text-indigo-700',
+    ring: 'ring-indigo-700/10',
+  },
+  green: {
+    bg: 'bg-green-50',
+    text: 'text-green-700',
+    ring: 'ring-green-700/10',
+  },
+  blue: {
+    bg: 'bg-blue-50',
+    text: 'text-blue-700',
+    ring: 'ring-blue-700/10',
+  },
+  pink: {
+    bg: 'bg-pink-50',
+    text: 'text-pink-700',
+    ring: 'ring-pink-700/10',
+  },
+  purple: {
+    bg: 'bg-purple-50',
+    text: 'text-purple-700',
+    ring: 'ring-purple-700/10',
+  },
+  yellow: {
+    bg: 'bg-yellow-50',
+    text: 'text-yellow-700',
+    ring: 'ring-yellow-700/10',
+  },
+};
+
+export const logos = [
+  { name: "Next.js", logo: "https://cdn.worldvectorlogo.com/logos/next-js.svg" },
+  { name: "React", logo: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+  { name: "TypeScript", logo: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
+  { name: "Framer Motion", logo: "https://cdn.worldvectorlogo.com/logos/framer-motion.svg" },
+  { name: "Node.js", logo: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" },
+  { name: "Sanity", logo: "https://cdn.worldvectorlogo.com/logos/sanity.svg" },
+  { name: "Strapi", logo: "https://cdn.worldvectorlogo.com/logos/strapi-2.svg" },
+  { name: "Tailwind CSS", logo: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" },
+  { name: "Vercel", logo: "https://cdn.worldvectorlogo.com/logos/vercel.svg" },
+  { name: "GitHub", logo: "https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" },
+  { name: "Firebase", logo: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg" },
+  { name: "Figma", logo: "https://cdn.worldvectorlogo.com/logos/figma-icon.svg" },
+  { name: "MongoDB", logo: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" },
+  { name: "Docker", logo: "https://cdn.worldvectorlogo.com/logos/docker.svg" },
+  { name: "AWS", logo: "https://cdn.worldvectorlogo.com/logos/aws-2.svg" },
+  { name: "Stripe", logo: "https://cdn.worldvectorlogo.com/logos/stripe-4.svg" },
+  { name: "Shopify", logo: "https://cdn.worldvectorlogo.com/logos/shopify.svg" },
+  { name: "Slack", logo: "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg" },
+  { name: "Azure", logo: "https://cdn.worldvectorlogo.com/logos/azure-1.svg" },
+  { name: "Netlify", logo: "https://cdn.worldvectorlogo.com/logos/netlify.svg" },
+  { name: "Postman", logo: "https://cdn.worldvectorlogo.com/logos/postman.svg" },
+  { name: "Redux", logo: "https://cdn.worldvectorlogo.com/logos/redux.svg" },
+  { name: "Three.js", logo: "https://cdn.worldvectorlogo.com/logos/threejs-1.svg" },
 ];
