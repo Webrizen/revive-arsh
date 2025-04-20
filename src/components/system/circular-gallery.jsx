@@ -329,19 +329,19 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: 'Bridge' },
-      { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: 'Desk Setup' },
-      { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: 'Waterfall' },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: 'Strawberries' },
-      { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: 'Deep Diving' },
-      { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: 'Train Track' },
-      { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: 'Santorini' },
-      { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: 'Blurry Lights' },
-      { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: 'New York' },
-      { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: 'Good Boy' },
-      { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: 'Coastline' },
-      { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: "Palm Trees" }
-    ]
+      { image: `/memories/1.png`, text: "First Click" },
+      { image: `/memories/2.png`, text: "Escape Route" },
+      { image: `/memories/3.png`, text: "Solo Peace" },
+      { image: `/memories/4.png`, text: "Forced Smile" },
+      { image: `/memories/5.png`, text: "Fading Light" },
+      { image: `/memories/6.png`, text: "Felt Empty" },
+      { image: `/memories/7.png`, text: "Grew Colder" },
+      { image: `/memories/8.png`, text: "Free Path" },
+      { image: `/memories/9.png`, text: "Masked Thoughts" },
+      { image: `/memories/10.png`, text: "Time Pause" },
+      { image: `/memories/11.png`, text: "Unnoticed Exit" },
+      { image: `/memories/12.png`, text: "Still Standing" }
+    ];       
     const galleryItems = items && items.length ? items : defaultItems
     this.mediasImages = galleryItems.concat(galleryItems)
     this.medias = this.mediasImages.map((data, index) => {
@@ -458,7 +458,7 @@ class App {
 export default function CircularGallery({
   items,
   bend = 3,
-  textColor = "#ffffff",
+  textColor = "#000",
   borderRadius = 0.05,
   font = "bold 30px DM Sans"
 }) {

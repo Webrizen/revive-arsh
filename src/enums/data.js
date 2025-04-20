@@ -37,7 +37,7 @@ export const projects = [
     title: "Templatrizen",
     description:
       "Library of premium Tailwind/TSX blocks and layouts. Design + performance focused. Ideal for rapid prototyping and design systems.",
-    image: "https://placehold.co/600x400",
+    image: "/coming-soon.png",
     tags: ["Tailwind", "TSX", "UI System"],
     color: "pink",
     colSpan: 2,
@@ -47,7 +47,7 @@ export const projects = [
     title: "AlgoDeck",
     description:
       "A clean, minimal algorithm visualizer with step-by-step breakdowns, animations, and dark mode. Built for DSA learners.",
-    image: "https://placehold.co/600x400",
+    image: "/coming-soon.png",
     tags: ["React", "Vite", "Tailwind", "Zustand"],
     color: "purple",
     colSpan: 2,
@@ -57,7 +57,7 @@ export const projects = [
     title: "Promptra",
     description:
       "Prompt storage and tagging tool. Save, reuse, and categorize prompts for ChatGPT and other AI tools.",
-    image: "https://placehold.co/600x400",
+    image: "/coming-soon.png",
     tags: ["Next.js", "Prisma", "SQLite"],
     color: "yellow",
     colSpan: 1,
