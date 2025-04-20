@@ -2,6 +2,7 @@ import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/system/navbar";
 import Link from "next/link";
+import StripTransition from "@/components/system/Transition";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -77,6 +78,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${bricolage.className} antialiased`}>
+      <StripTransition />
         <Navbar />
         {children}
         <section className="py-24 w-full">
