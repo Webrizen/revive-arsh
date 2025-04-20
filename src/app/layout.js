@@ -17,7 +17,7 @@ export const metadata = {
     "I am a web developer with over 5+ years of hands-on experience in building full-stack web applications, websites, and SaaS platforms. My primary expertise lies in Next.js 15, Framer Motion, TypeScript, and Tailwind CSS, with additional experience in both client-side and server-side JavaScript development.",
   keywords:
     "Next.js 15, Framer Motion, TypeScript, Tailwind CSS, web developer, full-stack development, web applications, websites, SaaS platforms",
-  authors: [{ name: "Arshahdul Ahmed", url: "https://arshahdul.webrizen.com" }],
+  authors: [{ name: "Arshahdul Ahmed", url: "https://revive-arsh.vercel.app" }],
   creator: "Arshahdul Ahmed",
   publisher: "Arshahdul Ahmed",
   openGraph: {
@@ -25,11 +25,11 @@ export const metadata = {
       "Arshahdul Ahmed - Nextjs 15 | Framer Motion | Strapi/Sanity | Tailwind",
     description:
       "I am a web developer with over 5+ years of hands-on experience in building full-stack web applications, websites, and SaaS platforms. My primary expertise lies in Next.js 15, Framer Motion, TypeScript, and Tailwind CSS, with additional experience in both client-side and server-side JavaScript development.",
-    url: "https://arshahdul.webrizen.com",
+    url: "https://revive-arsh.vercel.app",
     siteName: "Arshahdul Ahmed",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "https://revive-arsh.vercel.app/images/og-image.png",
         width: 1200,
         height: 630,
       },
@@ -43,7 +43,7 @@ export const metadata = {
       "Arshahdul Ahmed - Nextjs 15 | Framer Motion | Strapi/Sanity | Tailwind",
     description:
       "I am a web developer with over 5+ years of hands-on experience in building full-stack web applications, websites, and SaaS platforms. My primary expertise lies in Next.js 15, Framer Motion, TypeScript, and Tailwind CSS, with additional experience in both client-side and server-side JavaScript development.",
-    images: "/images/og-image.png",
+    images: "https://revive-arsh.vercel.app/images/og-image.png",
   },
   icons: {
     icon: "/icon.png",
