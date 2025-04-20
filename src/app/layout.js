@@ -55,6 +55,7 @@ export const metadata = {
     capable: true,
     statusBarStyle: "default",
   },
+  metadataBase: new URL('https://revive-arsh.vercel.app'),
   robots: {
     index: true,
     follow: true,

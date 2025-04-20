@@ -18,3 +18,9 @@
     --foreground: #ededed;
   }
 }
+
+@layer base {
+  .input {
+    @apply w-full border py-6 px-8 border-zinc-300  bg-transparent text-sm text-zinc-900 placeholder-zinc-500 focus:outline-none focus:ring-0 focus:border-zinc-900;
+  }
+}
