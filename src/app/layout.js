@@ -65,8 +65,8 @@ export const metadata = {
     other: "your-other-verification-code",
   },
   twitterCard: {
-    site: "@arshahdul",
-    creator: "@arshahdul",
+    site: "@shadow_jsx",
+    creator: "@shadow_jsx",
   },
   applicationName: "Arshahdul Ahmed",
   category: "website",
