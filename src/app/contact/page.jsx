@@ -6,7 +6,7 @@ export default function page() {
     <>
       <section className="bg-white py-12 relative">
         <div
-          className="absolute inset-x-0 top-0 left-0 md:w-[500px] w-[200px] h-[500px] blur-[300px] bg-gradient-to-t from-indigo-300  to-red-300"
+          className="absolute inset-x-0 top-0 left-0 md:w-[500px] pointer-events-none w-[200px] h-[500px] blur-[300px] bg-gradient-to-t from-indigo-300  to-red-300"
         >
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -22,7 +22,7 @@ export default function page() {
           <div className="mt-20 grid grid-cols-1 gap-16 lg:grid-cols-2">
             {/* LEFT SIDE */}
             <div className="space-y-12 text-base leading-7 text-zinc-600 ">
-              <div className="md:pt-42">
+              <div className="md:pt-20">
                 <h3 className="text-sm font-semibold text-zinc-900">
                   Build something timeless with me.
                 </h3>
@@ -102,9 +102,6 @@ export default function page() {
               method="POST"
               className="space-y-6"
             >
-              <h1 className="md:text-4xl font-bold text-zinc-700">
-                Connect with us
-              </h1>
               <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8">
                 <input
                   type="text"
@@ -165,6 +162,7 @@ export default function page() {
                           <input
                             type="radio"
                             name="budget"
+                            value={range}
                             className="peer absolute opacity-0"
                           />
                           <div className="h-4 w-4 rounded-full border border-zinc-300 dark:border-zinc-600 flex items-center justify-center transition-all duration-200 peer-checked:border-indigo-500 peer-checked:bg-indigo-500 peer-focus:ring-2 peer-focus:ring-indigo-500/30">

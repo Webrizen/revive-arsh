@@ -105,7 +105,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="/blog"
+            href="/blogs"
             className="flex items-center justify-left p-16 md:p-24 border-zinc-800 hover:bg-zinc-900 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
