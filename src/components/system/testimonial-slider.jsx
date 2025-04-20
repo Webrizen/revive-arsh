@@ -125,7 +125,7 @@ export default function TestimonialSlider() {
                 <img
                   src={testimonial.client.img || "/placehholder.svg"}
                   alt={testimonial.client.name}
-                  className="w-12 h-12 rounded-full flex md:hidden"
+                  className="w-12 h-12 rounded-full flex md:hidden object-cover"
                 />
                 <div className="space-y-1 flex-1">
                   <h2 className="text-lg font-semibold leading-none text-zinc-800">

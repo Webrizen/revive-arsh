@@ -80,7 +80,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium ">
-              Our Work
+              My Work
             </h2>
           </Link>
 
@@ -90,7 +90,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium">
-              About Us
+              About Me
             </h2>
           </Link>
 
@@ -100,7 +100,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium">
-              Our Process
+              My Process
             </h2>
           </Link>
 
@@ -110,7 +110,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium">
-              Blog
+             My Blog
             </h2>
           </Link>
         </div>
