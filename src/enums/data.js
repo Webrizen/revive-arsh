@@ -44,11 +44,12 @@ export const projects = [
   },
   {
     id: 5,
-    title: "AlgoDeck",
+    title: "Revive Hydration",
     description:
-      "A clean, minimal algorithm visualizer with step-by-step breakdowns, animations, and dark mode. Built for DSA learners.",
-    image: "/coming-soon.png",
-    tags: ["React", "Vite", "Tailwind", "Zustand"],
+      "Revive Hydration uses gentle, customizable reminders that fit seamlessly into your workflow. Stay hydrated without disrupting your focus or productivity.",
+    image: "https://revive-hydration.vercel.app/og-image.png",
+    link: "https://revive-hydration.vercel.app",
+    tags: ["Nextjs", "chrome web store", "Tailwind", "Zustand"],
     color: "purple",
     colSpan: 2,
   },
