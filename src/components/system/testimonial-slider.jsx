@@ -1,9 +1,9 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { testimonials } from "@/enums/data";
 
-// Custom hook for magnetic effect (create this in a separate file)
+// Custom hook for magnetic effect
 function useMagneticEffect(ref, strength = 16) {
   const onMouseMove = (e) => {
     const { current: el } = ref;
@@ -44,6 +44,7 @@ const StarRating = ({ rating }) => {
 export default function TestimonialSlider() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [loadedImages, setLoadedImages] = useState({});
   const testimonial = testimonials[index];
 
   const prevButtonRef = useRef(null);
@@ -51,6 +52,20 @@ export default function TestimonialSlider() {
 
   const prevMagnetic = useMagneticEffect(prevButtonRef);
   const nextMagnetic = useMagneticEffect(nextButtonRef);
+
+  // Preload images
+  useEffect(() => {
+    testimonials.forEach((testimonial) => {
+      const img = new Image();
+      img.src = testimonial.client.img || "/placeholder.svg";
+      img.onload = () => {
+        setLoadedImages((prev) => ({
+          ...prev,
+          [testimonial.id]: true,
+        }));
+      };
+    });
+  }, []);
 
   const handleNext = () => {
     setDirection(1);
@@ -62,9 +77,9 @@ export default function TestimonialSlider() {
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const variants = {
+  const slideVariants = {
     enter: (direction) => ({
-      x: direction > 0 ? 100 : -100,
+      x: direction > 0 ? "100%" : "-100%",
       opacity: 0,
     }),
     center: {
@@ -72,28 +87,51 @@ export default function TestimonialSlider() {
       opacity: 1,
     },
     exit: (direction) => ({
-      x: direction < 0 ? 100 : -100,
+      x: direction < 0 ? "100%" : "-100%",
       opacity: 0,
+    }),
+  };
+
+  const stripVariants = {
+    enter: (direction) => ({
+      clipPath: direction > 0 
+        ? "inset(0 100% 0 0)" 
+        : "inset(0 0 0 100%)",
+    }),
+    center: {
+      clipPath: "inset(0 0 0 0)",
+    },
+    exit: (direction) => ({
+      clipPath: direction < 0 
+        ? "inset(0 100% 0 0)" 
+        : "inset(0 0 0 100%)",
     }),
   };
 
   return (
     <div className="relative max-w-7xl mx-auto px-4">
       <div className="flex md:items-stretch gap-10 lg:gap-14">
-        <div className="hidden md:flex md:w-1/2 lg:w-2/5 md:h-auto overflow-hidden rounded-lg">
+        <div className="hidden md:flex md:w-1/2 lg:w-2/5 md:h-auto overflow-hidden rounded-lg relative">
           <AnimatePresence mode="wait" custom={direction}>
-            <motion.img
+            <motion.div
               key={testimonial.id}
-              src={testimonial.client.img || "/placehholder.svg"}
-              alt={testimonial.client.name}
-              className="w-full h-[400px] aspect-square object-cover object-top rounded-2xl"
+              className="w-full h-[400px] aspect-square rounded-2xl overflow-hidden"
+              custom={direction}
+              variants={stripVariants}
               initial="enter"
               animate="center"
               exit="exit"
-              variants={variants}
-              custom={direction}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-            />
+              transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
+            >
+              <motion.img
+                src={testimonial.client.img || "/placeholder.svg"}
+                alt={testimonial.client.name}
+                className="w-full h-full object-cover object-top"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: loadedImages[testimonial.id] ? 1 : 0 }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.div>
           </AnimatePresence>
         </div>
         <div className="flex-1 flex flex-col space-y-6 md:space-y-12 lg:space-y-16 md:py-6 lg:py-8 md:h-auto md:justify-center overflow-hidden">
@@ -101,13 +139,13 @@ export default function TestimonialSlider() {
             <motion.div
               key={testimonial.id}
               custom={direction}
-              variants={variants}
+              variants={slideVariants}
               initial="enter"
               animate="center"
               exit="exit"
-              transition={{ duration: 0.5, ease: "easeInOut" }}
+              transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
             >
-             <div className="inline-block mb-4">
+              <div className="inline-block mb-4">
                 <span className="inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-800">
                   {testimonial.category}
                 </span>
@@ -122,11 +160,19 @@ export default function TestimonialSlider() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                <img
-                  src={testimonial.client.img || "/placehholder.svg"}
-                  alt={testimonial.client.name}
-                  className="w-12 h-12 rounded-full flex md:hidden object-cover"
-                />
+                <div className="w-12 h-12 rounded-full flex md:hidden overflow-hidden">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={testimonial.id}
+                      src={testimonial.client.img || "/placeholder.svg"}
+                      alt={testimonial.client.name}
+                      className="w-full h-full object-cover"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: loadedImages[testimonial.id] ? 1 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </AnimatePresence>
+                </div>
                 <div className="space-y-1 flex-1">
                   <h2 className="text-lg font-semibold leading-none text-zinc-800">
                     {testimonial.client.name}
@@ -134,7 +180,7 @@ export default function TestimonialSlider() {
                   <p className="text-zinc-500">{testimonial.client.position}</p>
                 </div>
               </motion.div>
-               <div className="mt-4 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 {testimonial.skills.map((skill, index) => (
                   <span 
                     key={index}

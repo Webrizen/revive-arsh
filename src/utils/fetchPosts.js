@@ -6,7 +6,16 @@ export const query = groq`
     _id,
       title,
       description,
-      mainImage,
+      mainImage{
+       asset->{
+        _id,
+        url,
+        "metadata": {
+          "lqip": metadata.lqip
+        }
+      },
+      alt
+      },
       publishedAt,
       slug,
       author->{

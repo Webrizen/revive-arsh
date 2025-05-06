@@ -65,8 +65,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${bricolage.className} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${bricolage.className} antialiased`} suppressHydrationWarning>
         <NavigationProvider>
         <StripTransition>
           <Navbar />

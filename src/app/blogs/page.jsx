@@ -3,6 +3,7 @@ import { fetchPosts, query } from "@/utils/fetchPosts";
 import Link from "next/link";
 import GetImage from "@/components/system/get-image";
 import DateFormatter from "@/components/system/date-formater";
+import Image from "next/image";
 
 export default async function page() {
   const posts = await fetchPosts();
@@ -26,9 +27,13 @@ export default async function page() {
           >
             <div className="grid md:grid-cols-[.7fr_1fr] grid-cols-1 border-2 relative overflow-hidden rounded-lg border-gray-200 border-opacity-50 md:p-4 p-2 gap-6 items-center justify-start">
               <div className="w-full h-full rounded-lg border border-slate-300 overflow-hidden">
-                <GetImage
-                  source={post.mainImage.asset._ref}
-                  title={post.title}
+                <Image
+                  src={post?.mainImage?.asset?.url}
+                  alt={post.title}
+                  placeholder="blur"
+                  blurDataURL={post.mainImage.asset.metadata.lqip}
+                  width={600}
+                  height={400}
                 />
               </div>
               <div className="flex flex-col gap-2">
