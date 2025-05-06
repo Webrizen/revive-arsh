@@ -38,7 +38,7 @@ const Marquee = () => {
                 <img
                   src={tech.logo}
                   alt={tech.name}
-                  className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
+                  className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             ))}

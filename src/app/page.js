@@ -5,7 +5,6 @@ import { colorMap, projects } from "@/enums/data";
 import Link from "next/link";
 import TestimonialSlider from "@/components/system/testimonial-slider";
 import Marquee from "@/components/system/marquee";
-import CircularGallery from "@/components/system/circular-gallery";
 
 const stats = [
   { id: 1, name: "Businesses Served", value: "24+" },
@@ -17,7 +16,7 @@ const stats = [
 export default function Home() {
   return (
     <main className="flex min-h-screen w-full overflow-x-hidden flex-col items-center justify-between px-4">
-      <section className="bg-zinc-100 border-x border-t border-zinc-300 rounded-t-4xl w-full py-24 relative">
+      <section className="bg-zinc-100 border-x border-t border-zinc-300 rounded-t-4xl w-full pt-24 relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <svg
             aria-hidden="true"
@@ -71,8 +70,16 @@ export default function Home() {
               </h1>
               <div className="max-w-3xl">
                 <p className="text-2xl text-zinc-600 mb-8">
-                  A passionate full-stack developer crafting beautiful and
-                  functional digital experiences.
+                  I know what it feels like to be misunderstood by code... or clients.
+                  That’s why I build websites that speak clearly — to both machines and people.
+                </p>
+                <p className="text-2xl text-zinc-600 mb-8">
+                  No flashy promises. No empty buzzwords. Just clean, fast, and reliable websites
+                  that do exactly what you need — quietly and without drama.
+                </p>
+                <p className="text-2xl text-zinc-600">
+                  If you're tired of developers who overcomplicate things,
+                  maybe we should talk. I listen first. I act second.
                 </p>
               </div>
             </div>
@@ -80,9 +87,9 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 overflow-x-hidden relative">
+        <div className="w-full px-6 lg:px-8 overflow-x-hidden relative">
           <Marquee />
-          <dl className="grid grid-cols-1 gap-x-0 gap-y-6 h-full text-center lg:grid-cols-4 mt-4">
+          <dl className="grid grid-cols-1 gap-x-0 gap-y-6 h-full text-center lg:grid-cols-4 mt-4 mx-auto max-w-7xl">
             {stats.map((stat, index) => {
               const isFirst = index === 0;
               const isLast = index === stats.length - 1;
@@ -90,9 +97,8 @@ export default function Home() {
               return (
                 <div
                   key={stat.id}
-                  className={`flex w-full h-full flex-col gap-y-4 md:px-4 ${
-                    !isFirst && !isLast ? "border-x border-zinc-200" : ""
-                  }`}
+                  className={`flex w-full h-full flex-col gap-y-4 md:px-4 ${!isFirst && !isLast ? "border-x border-zinc-200" : ""
+                    }`}
                 >
                   <dt className="text-base/7 text-zinc-600">{stat.name}</dt>
                   <dd className="order-first text-3xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
@@ -133,29 +139,24 @@ export default function Home() {
                   (👉ﾟヮﾟ)👉 About Me
                 </h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-                The 18-Year-Old Hustle: No Days Off Since 15
+                  The 18-Year-Old Hustle: No Days Off Since 15
                 </p>
 
                 <p className="mt-6 text-lg leading-8 text-zinc-600">
-                  I'm an 18-year-old self-taught developer from India, building
-                  high-performance web apps with Next.js 15, TypeScript, and
-                  Tailwind CSS. I specialize in crafting scalable frontends,
-                  clean UI/UX, and solving real-world problems through code.
+                  I’m Arshahdul. I code because it gives me control over something.  I started at 15 — not because I loved computers, but because I wanted to build something that could run without me.
                 </p>
 
                 <p className="mt-6 text-lg leading-8 text-zinc-600">
-                  Freelancer by day, product builder by night — I’ve been
-                  writing code since I was 15 and never looked back. I don’t just
-                  build websites. I build systems, brands, and leverage the web
-                  to escape mediocrity.
+                  I’ve been told I'm too young to know what I’m doing. That works in my favor. People underestimate me. Then they wonder why their project is done early, clean, and working better than expected.
+                </p>
+
+                <p className="mt-6 text-lg leading-8 text-zinc-600">
+                  I specialize in Next.js, TypeScript, and building systems that scale quietly — the way things should.
                   <br />
-                  <br />I lead Webrizen, a modern web studio focused on
-                  websites, SaaS, and digital products. If you’re looking for
-                  someone who can think, design, and execute — you’re in the
-                  right place.
+                  <br />
+                  I run Webrizen. It's not a company. It's a mindset. If you're tired of developers who talk more than they code, let’s have a conversation.
                 </p>
 
-                {/* Timeline-like experience */}
                 <div className="mt-10 max-w-xl space-y-8 text-base leading-7 text-zinc-600 lg:max-w-none">
                   <div className="relative pl-9">
                     <dt className="inline font-semibold text-zinc-900">
@@ -173,10 +174,7 @@ export default function Home() {
                       </svg>
                       Technical Skills
                     </dt>
-                    <dd className="inline">
-                      : React, Next.js, TypeScript, Node.js, Tailwind CSS,
-                      GraphQL, PostgreSQL
-                    </dd>
+                    <dd className="inline">: React, Next.js, TypeScript, Tailwind CSS, Node.js</dd>
                   </div>
                   <div className="relative pl-9">
                     <dt className="inline font-semibold text-zinc-900">
@@ -194,10 +192,7 @@ export default function Home() {
                       </svg>
                       Design Approach
                     </dt>
-                    <dd className="inline">
-                      : User-centered design, accessibility-first, performance
-                      optimized
-                    </dd>
+                    <dd className="inline">: Clean, fast, functional. Built for humans.</dd>
                   </div>
                   <div className="relative pl-9">
                     <dt className="inline font-semibold text-zinc-900">
@@ -216,8 +211,7 @@ export default function Home() {
                       Philosophy
                     </dt>
                     <dd className="inline">
-                      : Build solutions that are maintainable, scalable, and
-                      delightful to use
+                      : Build things that last. Don't waste time on noise.
                     </dd>
                   </div>
                 </div>
@@ -307,9 +301,8 @@ export default function Home() {
                 key={project.id}
                 href={project.link || "/"}
                 target="_blank"
-                className={`group relative flex flex-col overflow-hidden rounded-xl border border-zinc-300 bg-zinc-50 transition md:col-span-${
-                  project.colSpan || 1
-                }`}
+                className={`group relative flex flex-col overflow-hidden rounded-xl border border-zinc-300 bg-zinc-50 transition md:col-span-${project.colSpan || 1
+                  }`}
               >
                 <div className="relative h-48 w-full overflow-hidden">
                   <img
@@ -845,40 +838,6 @@ export async function POST(req) {
           </p>
         </div>
         <TestimonialSlider />
-      </section>
-      <section className="bg-white py-24 space-y-12 relative">
-        <div className="md:absolute hidden -top-12 right-4 left-auto inset-0 z-0 overflow-hidden md:blur-[200px] blur-[500px] md:w-auto w-xl">
-          <svg id="blob-svg" viewBox="0 0 400 400" width="400" height="400">
-            <path
-              d="M322.5,285Q298,370,204.5,362Q111,354,61,277Q11,200,64.5,129.5Q118,59,203.5,52.5Q289,46,318,123Q347,200,322.5,285Z"
-              fill="#6B7280"
-              className="transition-all duration-500 ease-in-out"
-            ></path>
-          </svg>
-        </div>
-        <div className="md:absolute hidden -bottom-12 left-4 right-auto inset-0 z-0 overflow-hidden md:blur-[200px] blur-[500px] md:w-auto w-xl">
-          <svg id="blob-svg" viewBox="0 0 400 400" width="400" height="400">
-            <path
-              d="M322.5,285Q298,370,204.5,362Q111,354,61,277Q11,200,64.5,129.5Q118,59,203.5,52.5Q289,46,318,123Q347,200,322.5,285Z"
-              fill="#6B7280"
-              className="transition-all duration-500 ease-in-out"
-            ></path>
-          </svg>
-        </div>
-        <div className="space-y-4 max-w-7xl mx-auto text-center">
-          <p className="text-sm text-zinc-600 font-medium">Memories</p>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-black">
-            My life so far.
-          </h1>
-          <p className="text-zinc-600 leading-relaxed max-w-3xl mx-auto">
-            I have been fortunate to work with some amazing clients and
-            collaborators. Here are some of the memories I cherish from my
-            journey.
-          </p>
-          <div className="h-[600px] relative w-screen">
-            <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} />
-          </div>
-        </div>
       </section>
     </main>
   );

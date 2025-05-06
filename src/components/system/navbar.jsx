@@ -10,6 +10,26 @@ const outfit = Outfit({
   display: "swap",
 });
 
+// Reusable menu item component
+const NavMenuItem = ({
+  href,
+  title,
+  alignRight = false,
+  onClick,
+}) => (
+  <Link
+    href={href}
+    className={`flex items-center ${
+      alignRight ? "justify-end md:pr-12" : "justify-start md:pl-12"
+    } p-16 md:p-24 border-y border-zinc-800 hover:bg-zinc-900 transition-all duration-300`}
+    onClick={onClick}
+  >
+    <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white">
+      {title}
+    </h2>
+  </Link>
+);
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -19,33 +39,37 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex flex-col transition-all duration-500 ease-in-out ${
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
         isMenuOpen
           ? "min-h-screen bg-black text-white"
-          : "h-auto bg-white text-black"
+          : "bg-white/90 backdrop-blur-sm text-black"
       }`}
     >
       {/* Header */}
-      <header className="flex items-center justify-between p-6 md:p-8">
+      <header className="flex items-center justify-between px-6 py-4 md:px-8 md:py-6 relative z-10">
         <Link
           href="/"
-          className={`flex items-center ${outfit.className} text-xl font-medium`}
+          className={`text-xl md:text-2xl font-bold ${outfit.className}`}
         >
           Arshahdul A.
         </Link>
-        <div className="flex items-center">
+
+        <div className="flex items-center gap-4">
           <Link
             href="/contact"
-            className={`rounded-full ${
-              isMenuOpen ? "bg-white text-black" : "bg-black text-white"
-            } px-6 py-3 text-sm font-medium mr-6`}
+            className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all ${
+              isMenuOpen
+                ? "bg-white text-black hover:bg-gray-200"
+                : "bg-black text-white hover:bg-gray-900"
+            }`}
           >
-            Contact us
+            Contact Me
           </Link>
+
           <button
             onClick={toggleMenu}
-            className="cursor-pointer hover:opacity-50 transition-all duration-300"
-            aria-label="Toggle menu"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800/5 cursor-pointer transition-all"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,89 +77,51 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6"
+              className="w-6 h-6"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M3.75 9h16.5m-16.5 6.75h16.5"
+                d={
+                  isMenuOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M3.75 9h16.5m-16.5 6.75h16.5"
+                }
               />
             </svg>
           </button>
         </div>
       </header>
 
-      {/* Main Grid - Animated Height */}
+      {/* Menu Grid - Slide down/up animation */}
       <div
-        className={`flex-1 transition-all duration-500 ease-in-out ${
-          isMenuOpen ? "max-h-screen" : "max-h-0 overflow-hidden"
+        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+          isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div
-          className={`grid grid-cols-1 md:grid-cols-2 overflow-hidden transition-all duration-500 ease-in-out`}
-        >
-          <Link
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <NavMenuItem
             href="/work"
-            className="flex items-center justify-right p-16 md:p-24 border-y border-r border-zinc-800 hover:bg-zinc-900 transition-colors"
+            title="My Work"
+            alignRight
             onClick={() => setIsMenuOpen(false)}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium ">
-              My Work
-            </h2>
-          </Link>
-
-          <Link
+          />
+          <NavMenuItem
             href="/about"
-            className="flex items-center justify-left p-16 md:p-24 border-y border-zinc-800 hover:bg-zinc-900 transition-colors"
+            title="About Me"
             onClick={() => setIsMenuOpen(false)}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium">
-              About Me
-            </h2>
-          </Link>
-
-          <Link
+          />
+          <NavMenuItem
             href="/process"
-            className="flex items-center justify-right p-16 md:p-24 border-r border-zinc-800 hover:bg-zinc-900 transition-colors"
+            title="My Process"
+            alignRight
             onClick={() => setIsMenuOpen(false)}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium">
-              My Process
-            </h2>
-          </Link>
-
-          <Link
+          />
+          <NavMenuItem
             href="/blogs"
-            className="flex items-center justify-left p-16 md:p-24 border-zinc-800 hover:bg-zinc-900 transition-colors"
+            title="My Blog"
             onClick={() => setIsMenuOpen(false)}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium">
-             My Blog
-            </h2>
-          </Link>
-        </div>
-        <div
-          className={`md:grid hidden grid-cols-1 md:grid-cols-2 border-t border-zinc-800 p-8 transition-all duration-500 ease-in-out`}
-        >
-          <div className="mb-8 md:mb-0">
-            <h3 className="text-lg font-medium mb-6">Our offices</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-medium mb-1">Copenhagen</h4>
-                <p className="text-zinc-400">1 Carlsberg Gate</p>
-                <p className="text-zinc-400">1260, København, Denmark</p>
-              </div>
-              <div>
-                <h4 className="font-medium mb-1">Billund</h4>
-                <p className="text-zinc-400">24 Lego Allé</p>
-                <p className="text-zinc-400">7190, Billund, Denmark</p>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-start md:items-end">
-            <h3 className="text-lg font-medium mb-6">Follow us</h3>
-            {/* Social links would go here */}
-          </div>
+          />
         </div>
       </div>
     </div>
