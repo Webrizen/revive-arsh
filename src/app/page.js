@@ -5,6 +5,8 @@ import { colorMap, projects } from "@/enums/data";
 import Link from "next/link";
 import TestimonialSlider from "@/components/system/testimonial-slider";
 import Marquee from "@/components/system/marquee";
+import { StarIcon } from "lucide-react";
+import IntroImg from "@/assets/intro-img.png";
 
 const stats = [
   { id: 1, name: "Businesses Served", value: "24+" },
@@ -108,6 +110,124 @@ export default function Home() {
               );
             })}
           </dl>
+        </div>
+      </section>
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col md:flex-row gap-16">
+          <div className="flex md:flex-1">
+            <Image src={IntroImg} placeholder="blur" quality={100} alt="Professional freelancer delivering exceptional results" width={1300} height={900} className="w-full md:h-full aspect-square object-cover rounded-lg bg-zinc-50" />
+          </div>
+          <div className="md:w-1/2 lg:w-[54%] space-y-12 text-zinc-700">
+            <h1 className="text-zinc-900 font-semibold text-2xl sm:text-3xl md:text-4xl">
+              Trusted by 22+ clients worldwide with 100% satisfaction rate
+            </h1>
+            <p className="text-zinc-600 dark:text-zinc-400">
+              For over 6 years, I've helped startups and enterprises transform their ideas into high-performance digital solutions. My consistent top-rated status across platforms reflects my commitment to delivering exceptional value on every project.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {/* Upwork Card - Compact Design */}
+              <div className="bg-gradient-to-br from-[#37a000]/10 to-[#006400]/10 rounded-xl overflow-hidden border border-gray-200 ">
+                <div className="p-5 text-zinc-700">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://cdn.worldvectorlogo.com/logos/upwork.svg"
+                        alt="Upwork"
+                        className="h-6 w-auto"
+                      />
+                    </div>
+                    <span className="bg-green-50 px-2 py-0.5 rounded-full text-xs font-medium">Top Rated Plus</span>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="bg-white p-3 rounded-lg">
+                      <p className="text-xs opacity-80">Success Rate</p>
+                      <p className="text-xl font-bold">100%</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg">
+                      <p className="text-xs opacity-80">Earnings</p>
+                      <p className="text-xl font-bold">$150+</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg">
+                      <p className="text-xs opacity-80">Clients</p>
+                      <p className="text-xl font-bold">4+</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg">
+                      <p className="text-xs opacity-80">Hours</p>
+                      <p className="text-xl font-bold">5K+</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <a
+                      href="https://www.upwork.com/freelancers/~016814aea34d759b3f"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white text-[#37a000] px-3 py-1.5 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"
+                    >
+                      Verify Profile
+                    </a>
+                    <div className="flex items-center space-x-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <StarIcon key={i} className="h-4 w-4 text-yellow-300 fill-current" />
+                      ))}
+                      <span className="text-xs ml-1">4.95/5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Truelancer Card - Compact Design */}
+              <div className="bg-gradient-to-br from-[#0a66c2]/10 to-[#004182]/10 rounded-xl overflow-hidden border border-gray-200 ">
+                <div className="p-5 text-zinc-700">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://static.truelancer.com/truelancer-logo-dark-background_small.png"
+                        alt="Truelancer"
+                        className="h-6 w-auto invert"
+                      />
+                    </div>
+                    <span className="bg-blue-50 px-2 py-0.5 rounded-full text-xs font-medium">Premium</span>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="bg-white p-3 rounded-lg">
+                      <p className="text-xs opacity-80">Rating</p>
+                      <p className="text-xl font-bold">4.9/5</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg">
+                      <p className="text-xs opacity-80">Projects</p>
+                      <p className="text-xl font-bold">23+</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg">
+                      <p className="text-xs opacity-80">Repeat Work</p>
+                      <p className="text-xl font-bold">85%</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg">
+                      <p className="text-xs opacity-80">On Budget</p>
+                      <p className="text-xl font-bold">98%</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <a
+                      href="https://www.truelancer.com/freelancer/nightmareloops"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white text-[#0a66c2] px-3 py-1.5 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"
+                    >
+                      Verify Profile
+                    </a>
+                    <div className="text-right">
+                      <p className="text-xs opacity-80">Since 2021</p>
+                      <p className="text-sm font-medium">24+ Reviews</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section className="relative isolate overflow-hidden bg-white py-24 sm:py-32">

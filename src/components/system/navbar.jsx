@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import ReviveLink from "./revive-link";
 import { Outfit } from "next/font/google";
 
 const outfit = Outfit({
@@ -17,7 +17,8 @@ const NavMenuItem = ({
   alignRight = false,
   onClick,
 }) => (
-  <Link
+  <ReviveLink
+  prefetch={false}
     href={href}
     className={`flex items-center ${
       alignRight ? "justify-end md:pr-12" : "justify-start md:pl-12"
@@ -27,7 +28,7 @@ const NavMenuItem = ({
     <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white">
       {title}
     </h2>
-  </Link>
+  </ReviveLink>
 );
 
 const Navbar = () => {
@@ -47,15 +48,17 @@ const Navbar = () => {
     >
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 md:px-8 md:py-6 relative z-10">
-        <Link
+        <ReviveLink
+        prefetch={false}
           href="/"
           className={`text-xl md:text-2xl font-bold ${outfit.className}`}
         >
           Arshahdul A.
-        </Link>
+        </ReviveLink>
 
         <div className="flex items-center gap-4">
-          <Link
+          <ReviveLink
+          prefetch={false}
             href="/contact"
             className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all ${
               isMenuOpen
@@ -64,7 +67,7 @@ const Navbar = () => {
             }`}
           >
             Contact Me
-          </Link>
+          </ReviveLink>
 
           <button
             onClick={toggleMenu}
