@@ -15,7 +15,7 @@ export const projects = [
     title: "Webrizen",
     description:
       "Freelance brand offering high-performance websites, e-commerce, and SEO solutions.",
-    image: "http://webrizen.vercel.app/assets/1.png",
+    image: "http://webrizen.vercel.app/og-image.png",
     link: "https://webrizen.vercel.app",
     tags: ["Tailwind", "Webflow", "SEO"],
     color: "green",
