@@ -23,15 +23,15 @@ export const projects = [
   },
   {
     id: 3,
-    title: "MetaMafia",
+    title: "EzInvito",
     description:
-      "Community-based platform using Firestore real-time updates & advanced frontend stack.",
-    image: "http://meta-mafia.vercel.app/twitter_summary_card.png",
-    link: "https://meta-mafia.vercel.app",
-    tags: ["Firebase", "React", "Form UX"],
-    color: "blue",
+      "EzInvito is a platform where creating and managing invitations for events is made easy with the power of AI. It allows users to design custom invitations, track RSVPs, and manage guest lists effortlessly.",
+    image: "https://ezinvito.vercel.app/og-image.png",
+    tags: ["Next.js", "MongoDB", "Clerk"],
+    color: "yellow",
     colSpan: 1,
   },
+
   {
     id: 4,
     title: "Templatrizen",
@@ -55,12 +55,13 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Promptra",
+    title: "MetaMafia",
     description:
-      "Prompt storage and tagging tool. Save, reuse, and categorize prompts for ChatGPT and other AI tools.",
-    image: "/coming-soon.png",
-    tags: ["Next.js", "Prisma", "SQLite"],
-    color: "yellow",
+      "Community-based platform using Firestore real-time updates & advanced frontend stack.",
+    image: "http://meta-mafia.vercel.app/twitter_summary_card.png",
+    link: "https://meta-mafia.vercel.app",
+    tags: ["Firebase", "React", "Form UX"],
+    color: "blue",
     colSpan: 1,
   },
 ];

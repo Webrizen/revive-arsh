@@ -21,13 +21,13 @@ export default function Footer() {
                     <span className="absolute w-16 h-16 -bottom-1 -left-1 bg-indigo-300 rounded-md rotate-45" />
                   </div>
                 </div>
-                <div className="mx-auto text-center max-w-xl md:max-w-2xl relative space-y-8">
+                <div className="mx-auto text-center max-w-xl md:max-w-3xl relative space-y-8">
                   <h1 className="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-zinc-950">
-                    Say Hi 👋,{" "}
+                    If you scrolled this far, It's time to{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-600 from-20% via-indigo-400 via-30% to-teal-600">
-                      Get started
+                      LEVEL UP
                     </span>{" "}
-                    and Complete.
+                    your project!
                   </h1>
                   <p className="text-zinc-700">
                     I’m always open to discussing new projects, creative ideas,
