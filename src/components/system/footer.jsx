@@ -23,11 +23,11 @@ export default function Footer() {
                 </div>
                 <div className="mx-auto text-center max-w-xl md:max-w-3xl relative space-y-8">
                   <h1 className="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-zinc-950">
-                    If you scrolled this far, It's time to{" "}
+                   What’s Your {" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-600 from-20% via-indigo-400 via-30% to-teal-600">
-                      LEVEL UP
+                      NEXT 
                     </span>{" "}
-                    your project!
+                    Big Idea?
                   </h1>
                   <p className="text-zinc-700">
                     I’m always open to discussing new projects, creative ideas,
@@ -39,7 +39,7 @@ export default function Footer() {
                       href="/contact"
                       className="outline-none h-12 px-5 rounded-full bg-zinc-950 hover:bg-zinc-800 text-white flex items-center"
                     >
-                      Get In touch
+                      Book a Free Consultation
                     </Link>
                   </div>
                 </div>
