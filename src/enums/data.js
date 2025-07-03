@@ -27,6 +27,7 @@ export const projects = [
     description:
       "EzInvito is a platform where creating and managing invitations for events is made easy with the power of AI. It allows users to design custom invitations, track RSVPs, and manage guest lists effortlessly.",
     image: "https://ezinvito.vercel.app/og-image.png",
+    link: "https://ezinvito.vercel.app",
     tags: ["Next.js", "MongoDB", "Clerk"],
     color: "yellow",
     colSpan: 1,
@@ -38,6 +39,7 @@ export const projects = [
     description:
       "Library of premium Tailwind/TSX blocks and layouts. Design + performance focused. Ideal for rapid prototyping and design systems.",
     image: "/coming-soon.png",
+    link: "https://revive-edge.vercel.app",
     tags: ["Tailwind", "TSX", "UI System"],
     color: "pink",
     colSpan: 2,
